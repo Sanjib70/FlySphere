@@ -1,32 +1,40 @@
-import React from 'react'
-import pic2 from "../../public/pic2.jpg"
+import { Plane } from 'lucide-react';
+import heroImg from '../assets/pic1.jpg'; // Replace with your actual image path
 
-function Banner() {
+export default function Banner() {
   return (
-    <>
-    <div className="max-w-screen-2xl containermx-auto md:px-20 px-4 flex flex-col md:flex-row my-10">
-      <div className=" order-2 md:order-1 w-full md:w-1/2 mt-12 md:mt-32">
-      <div className="space-y-12">
-      <h1 className="text-4xl font-bold">
-      Welcome to FlySphere  , reach your destination at time
-      </h1>
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam optio assumenda dolores temporibus facilis odio voluptate pariatur inventore quia, unde eius, aperiam ratione aliquid eum fugiat suscipit reiciendis odit hic.
-      </p>
-      <p className="text-blue-100 text-xl">
-        Search your flight easily !!!
-      </p>
-      <button className="btn btn-primary"><a href="/SearchFlight">Search Flight</a></button>
-      </div>
-      </div>
-      <div className=" order-1 w-full md:w-1/2 flex justify-center items-center">
-      <img src={pic2} className="w-80 h-92 rounded-full
-    display: black
-    margin: auto " alt="" />
-      </div>
-    </div>
-    </>
-  )
-}
+    <section className="bg-[#1E232B] text-white py-20 px-8 md:px-20">
+      <div className="container mx-auto grid md:grid-cols-2  items-center">
+        {/* Left Side */}
+        <div className="text-left">
+          <h1 className="text-4xl md:text-5xl font-bold leading-tight mb-6">
+            Welcome to <span className="text-blue-400">FlySphere</span>,
+            <br />
+            reach your destination <span className="text-blue-400">on time</span>
+          </h1>
+          <p className="text-gray-300 mb-8 text-lg max-w-3xl">
+            At FlySphere, we are committed to redefining air travel with a perfect blend of
+            safety, comfort, and innovation. Serving destinations across the globe, we pride
+            ourselves on providing exceptional customer service, on-time performance, and a
+            seamless travel experience. Our modern fleet is equipped with state-of-the-art
+            technology, and our dedicated crew ensures every journey is smooth and enjoyable.
+          </p>
+          <p className="text-lg font-medium mb-8">Search your flight easily!</p>
+          <button className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 transition px-5 py-3 rounded-xl text-white font-semibold">
+            <Plane size={20} />
+            <a href='/SearchFlight'>Search Flight</a>
+          </button>
+        </div>
 
-export default Banner
+        {/* Right Side - Image */}
+        <div className="flex justify-center">
+          <img
+            src={heroImg}
+            alt="Flight Around Globe"
+            className="rounded-full w-80 h-80 object-cover shadow-lg"
+          />
+        </div>
+      </div>
+    </section>
+  );
+}

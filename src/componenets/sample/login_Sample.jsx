@@ -1,5 +1,6 @@
-import { useState } from "react";
-import { useNavigate } from "react-router-dom";
+ import { useState } from "react";
+ import { useNavigate } from 'react-router-dom';
+
 
 const FlysphereLogin = () => {
   const [email, setEmail] = useState("");
@@ -45,8 +46,31 @@ const FlysphereLogin = () => {
     } finally {
       setIsLoading(false);
     }
-  };
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+  const [rememberMe, setRememberMe] = useState(false);
+  const [isLoading, setIsLoading] = useState(false);
+  const [error, setError] = useState("");
   
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    setError("");
+    
+    if (!email || !password) {
+      setError("Please enter both email and password");
+      return;
+    }
+    
+    setIsLoading(true);
+    
+    // Simulating API call
+    setTimeout(() => {
+      setIsLoading(false);
+      // For demo purposes only - in production, this would be an actual API call
+      console.log("Login attempt:", { email, password, rememberMe });
+    }, 1500);
+  };
+
   return (
     <div className="flex items-center justify-center min-h-screen bg-gray-900">
       <div className="w-full max-w-md px-6">
@@ -158,6 +182,5 @@ const FlysphereLogin = () => {
     </div>
   );
 };
-
 
 export default FlysphereLogin;
