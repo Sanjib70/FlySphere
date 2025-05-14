@@ -1,13 +1,13 @@
 import { Route, Routes } from "react-router-dom";
-import About from "../src/componenets/About/About";
-import Home from '../src/componenets/Home/Home';
-import BookingDetail from './componenets/BookingDetail.jsx';
-import Destinations from './componenets/Destinations';
-import FlightBooking from './componenets/FlightBooking.jsx';
-import Login from "./componenets/login.jsx";
-import SearchFlight from './componenets/SearchFlight.jsx';
-import Services from "./componenets/Services.jsx";
-import Signup from './componenets/Signup.jsx';
+import About from "../src/components/About/About";
+import Home from '../src/components/Home/Home';
+import BookingDetail from './components/BookingDetail.jsx';
+import Destinations from './components/Destinations';
+import FlightBooking from './components/FlightBooking.jsx';
+import Login from "./components/login.jsx";
+import SearchFlight from './components/SearchFlight.jsx';
+import Services from "./components/Services.jsx";
+import Signup from './components/Signup.jsx';
 
 function App() {
   return (

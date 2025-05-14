@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import cardlist from '../componenets/data.js';
+import cardlist from '../components/data.js';
 
 function Normal() {
   const [hoveredIndex, setHoveredIndex] = useState(null);
