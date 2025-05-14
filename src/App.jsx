@@ -4,7 +4,7 @@ import Home from '../src/components/Home/Home';
 import BookingDetail from './components/BookingDetail.jsx';
 import Destinations from './components/Destinations';
 import FlightBooking from './components/FlightBooking.jsx';
-import Login from "./components/login.jsx";
+import Login from "./components/Login.jsx";
 import SearchFlight from './components/SearchFlight.jsx';
 import Services from "./components/Services.jsx";
 import Signup from './components/Signup.jsx';
